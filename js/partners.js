@@ -1,6 +1,8 @@
 
 const renderItems = (data) => {
-    console.log(data);
+    data.forEach(element => {
+        console.log(element);
+    });
 }
 
 fetch('https://gloprojecttest-default-rtdb.europe-west1.firebasedatabase.app/db/partners.json')
