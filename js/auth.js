@@ -41,9 +41,9 @@ buttonOut.addEventListener('click', () => {
 
 logInForm.addEventListener('submit', (event) => {
     event.preventDefault()
-    if (inputLogin.value !== "") {
+    if (inputLogin.value.trim() !== "") {
         const user = {
-            login: inputLogin.value,
+            login: inputLogin.value.replace(/\s+/g, ''),
             password: inputPassword.value
         }
         localStorage.setItem('user', JSON.stringify(user))
